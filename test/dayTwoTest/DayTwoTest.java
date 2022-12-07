@@ -37,7 +37,6 @@ class DayTwoTest {
 		torneo.addPlayer(jugadordos);
 		char eleccionDelJugadorUno = 'A';
 		char eleccionDelJugadorDos = 'Y';
-		//la primera es del oponente
 		torneo.playRound(jugadoruno, jugadordos, eleccionDelJugadorUno, eleccionDelJugadorDos);
 		Integer vo = jugadordos.getScore();
 		Integer ve = 8;
@@ -56,7 +55,6 @@ class DayTwoTest {
 		Player jugadordos = new Player();
 		torneo.addPlayer(jugadoruno);
 		torneo.addPlayer(jugadordos);
-		//la primera es del oponente
 		torneo.playRound(jugadoruno, jugadordos, 'A', 'Y');
 		torneo.playRound(jugadoruno, jugadordos, 'B', 'X');
 		torneo.playRound(jugadoruno, jugadordos, 'C', 'Z');
@@ -74,7 +72,6 @@ class DayTwoTest {
 		Player jugadordos = new Player();
 		torneo.addPlayer(jugadoruno);
 		torneo.addPlayer(jugadordos);
-		//la primera es del oponente
 		Scanner scanner = new Scanner(new File("test/dayTwoTest/sample.txt"));
 		while(scanner.hasNextLine()) {
 			String linea = scanner.nextLine();
@@ -95,7 +92,6 @@ class DayTwoTest {
 		Player jugadordos = new Player();
 		torneo.addPlayer(jugadoruno);
 		torneo.addPlayer(jugadordos);
-		//la primera es del oponente
 		torneo.calculateRound(jugadoruno, jugadordos, 'A', 'Y');
 		torneo.calculateRound(jugadoruno, jugadordos, 'B', 'X');
 		torneo.calculateRound(jugadoruno, jugadordos, 'C', 'Z');

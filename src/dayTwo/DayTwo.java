@@ -13,7 +13,6 @@ public class DayTwo {
 		Player jugadordos = new Player();
 		torneo.addPlayer(jugadoruno);
 		torneo.addPlayer(jugadordos);
-		//la primera es del oponente
 		Scanner scanner = new Scanner(new File("src/dayTwo/input.txt"));
 		while(scanner.hasNextLine()) {
 			String linea = scanner.nextLine();

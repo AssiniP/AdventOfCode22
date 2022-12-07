@@ -20,8 +20,6 @@ public class Tournament {
 		// TODO Auto-generated method stub
 		//UNO ES OPONENTE, DOS INGRESO
 		//desde la perspectiva de jug 1
-		/*eleccionDelJugadorUno = Character.toUpperCase(eleccionDelJugadorUno);
-		eleccionDelJugadorDos = Character.toUpperCase(eleccionDelJugadorDos);*/
 		eleccionDelJugadorUno = changeTheInput(eleccionDelJugadorUno);
 		eleccionDelJugadorDos = changeTheInput(eleccionDelJugadorDos);
 		
@@ -51,20 +49,11 @@ public class Tournament {
 				}
 			}
 		}
-		/*if(eleccionDelJugadorUno == eleccionDelJugadorDos) {
-			outcomeIsADraw(jugadoruno, jugadordos, eleccionDelJugadorUno, eleccionDelJugadorDos);
-		} else if(eleccionDelJugadorUno < eleccionDelJugadorDos) {
-			outcomeIsALoss(jugadoruno, jugadordos, eleccionDelJugadorUno, eleccionDelJugadorDos);
-		} else {
-			outcomeIsAWin(jugadoruno, jugadordos, eleccionDelJugadorUno, eleccionDelJugadorDos);
-		}*/
 	}
 
 	private void outcomeIsAWin(Player jugadoruno, Player jugadordos, char eleccionDelJugadorUno,
 			char eleccionDelJugadorDos) {
 		// TODO Auto-generated method stub
-		//x vale 1, y vale 2, z vale 3. ganar vale 6
-		//desde la persp de jug 1
 		Integer playerOneScore = calculateValueOfChoice(eleccionDelJugadorUno);
 		Integer playerTwoScore = calculateValueOfChoice(eleccionDelJugadorDos);
 		jugadoruno.addToTheScore(playerOneScore + 6);
@@ -87,8 +76,6 @@ public class Tournament {
 	private void outcomeIsALoss(Player jugadoruno, Player jugadordos, char eleccionDelJugadorUno,
 			char eleccionDelJugadorDos) {
 		// TODO Auto-generated method stub
-		//x vale 1, y vale 2, z vale 3. perder vale 0
-		//desde la persp de jug 1
 		Integer playerOneScore = calculateValueOfChoice(eleccionDelJugadorUno);
 		Integer playerTwoScore = calculateValueOfChoice(eleccionDelJugadorDos);
 		jugadoruno.addToTheScore(playerOneScore + 0);
@@ -99,8 +86,6 @@ public class Tournament {
 	private void outcomeIsADraw(Player jugadoruno, Player jugadordos, char eleccionDelJugadorUno,
 			char eleccionDelJugadorDos) {
 		// TODO Auto-generated method stub
-		//x vale 1, y vale 2, z vale 3. empatar vale 3
-		//desde la persp de jug 1
 		Integer playerOneScore = calculateValueOfChoice(eleccionDelJugadorUno);
 		Integer playerTwoScore = calculateValueOfChoice(eleccionDelJugadorDos);
 		jugadoruno.addToTheScore(playerOneScore + 3);
@@ -119,7 +104,6 @@ public class Tournament {
 			default:
 				return eleccionDelJugador;
 				}
-		//return 0;
 	}
 
 	public void calculateRound(Player jugadoruno, Player jugadordos, char eleccionDelJugadorUno, char rondaDecidida) {
