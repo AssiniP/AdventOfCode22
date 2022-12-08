@@ -15,6 +15,19 @@ public class DayThree {
 			valueOfItemsCombined += sack.getValueOfRepeatedItem();
 		}
 		System.out.println(valueOfItemsCombined);
+		scanner = new Scanner(new File("src/dayThree/input.txt"));
+		Integer valueOfBadges = 0;
+		while(scanner.hasNextLine()) {
+			Rucksack one = new Rucksack(scanner.nextLine());
+			Rucksack two = new Rucksack(scanner.nextLine());
+			Rucksack three = new Rucksack(scanner.nextLine());
+			ElveGroup group = new ElveGroup();
+			group.addRucksack(one);
+			group.addRucksack(two);
+			group.addRucksack(three);
+			valueOfBadges += group.getValueOfBadge();
+		}
+		System.out.println(valueOfBadges);
 
 	}
 

@@ -11,6 +11,10 @@ public class Rucksack {
 		this.itemsItContains = string;
 	}
 
+	public String getItemsItContains() {
+		return itemsItContains;
+	}
+
 	public Character getRepeatedItem() {
 		// TODO Auto-generated method stub
 		Integer lenght = itemsItContains.length();
